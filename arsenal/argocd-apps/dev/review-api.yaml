@@ -13,8 +13,8 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: arsenal
   source:
-    path: arsenal/stakater-nordmart-review-api/dev
-    repoURL: 'https://github.com/DESTINATION_ORG/webinar-apps-gitops-config.git'
+    path: arsenal/review-api/dev
+    repoURL: 'https://github.com/DESTINATION_ORG/apps-gitops-config.git'
     targetRevision: HEAD
   syncPolicy:
     automated:

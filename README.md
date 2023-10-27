@@ -76,8 +76,8 @@ We have 3 apps:
 
 **Gabbar** has two apps: 
 
-1. stakater-nordmart-review, 
-2. stakater-nordmart-review-ui
+1. review, 
+2. review-ui
 
 **Veeru** has one app: 
 
