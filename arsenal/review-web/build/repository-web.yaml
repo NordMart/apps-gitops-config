@@ -1,0 +1,13 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  name: review-web
+spec:
+  git_provider:
+    secret:
+      key: provider.token
+      name: github-webhook-config-web
+    webhook_secret:
+      key: webhook.secret
+      name: github-webhook-config-web
+  url: 'https://github.com/NordMartTestZoneMain/review-web'
