@@ -10,4 +10,4 @@ spec:
     webhook_secret:
       key: webhook.secret
       name: github-webhook-config-web
-  url: 'https://github.com/NordMartTestZoneMain/review-web'
+  url: 'https://github.com/DESTINATION_ORG/review-web'
