@@ -1,20 +1,20 @@
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: cd-ssh-creds
+  name: git-ssh-creds
 spec:
   secretStoreRef:
-    name: tenant-vault-secret-store
+    name: tenant-vault-shared-secret-store
     kind: SecretStore
   refreshInterval: "1m0s"
   target:
-    name: cd-ssh-creds
+    name: git-ssh-creds
     creationPolicy: 'Owner'
     template:
       data:
-        id_rsa: "{{ .id_rsa | b64dec | toString }}"
+        id_rsa: "{{ .id_rsa | toString }}"
   data:
   - secretKey: id_rsa
     remoteRef:
-      key: apps-gitops-ssh-creds
-      property: private_key
+      key: git-ssh-creds
+      property: id_rsa
