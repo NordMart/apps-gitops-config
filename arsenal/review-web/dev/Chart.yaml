@@ -1,0 +1,8 @@
+apiVersion: v2
+dependencies:
+  - name: review-web
+    repository: https://nexus-helm-stakater-nexus.ROUTE_SUBDOMAIN/repository/helm-charts/
+    version: 1.0.0
+description: A Helm chart for Kubernetes
+name: review-web
+version: 1.0.0
