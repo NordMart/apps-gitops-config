@@ -1,27 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: arsenal-preview-stakater-nordmart-reivew-web
+  name: retail-build-stakater-nordmart-reivew-web
   namespace: rh-openshift-gitops-instance
   labels:
-    stakater.com/tenant: arsenal
-    stakater.com/env: preview
-    stakater.com/kind: preview
+    stakater.com/tenant: retail
+    stakater.com/env: build
+    stakater.com/kind: build    
   finalizers:
     # The default behaviour is foreground cascading deletion
     - resources-finalizer.argocd.argoproj.io
-
 spec:
   destination:
-    namespace: arsenal-build
+    namespace: retail-build
     server: 'https://kubernetes.default.svc'
-  project: arsenal
+  project: retail
   source:
-    path: arsenal/review-web/preview
+    path: retail/review-web/build
     repoURL: 'https://github.com/DESTINATION_ORG/apps-gitops-config.git'
     targetRevision: HEAD
   syncPolicy:
     automated:
-      allowEmpty: true
       prune: true
       selfHeal: true
